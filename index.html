@@ -10,9 +10,11 @@
 <body>
 <div class="container">
     <header>
-        <h1><img src="notedown_logo.svg" alt="NoteDown Logo" width="64" height="64" style="margin-right:10px;"/>
-            <span class="spacer"></span> Privacy Policy – NoteDown</h1>
-        <div class="controls">
+        <div class="header-main">
+            <img src="notedown_logo.svg" alt="NoteDown Logo" width="48" height="48"/>
+            <span class="header-title">Privacy Policy – NoteDown</span>
+        </div>
+        <nav class="controls" id="main-menu">
             <select class="language-switcher control-btn" onchange="switchLanguage(this.value)">
                 <option value="it">🇮🇹 Italiano</option>
                 <option value="en">🇬🇧 English</option>
@@ -20,7 +22,10 @@
             <button class="darkmode-toggle control-btn" id="darkmode-toggle" title="Cambia tema" aria-label="Cambia tema">
                 <i class="fa-solid fa-moon"></i>
             </button>
-        </div>
+        </nav>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Apri menu" aria-controls="main-menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
 
     <!-- ITALIANO -->
@@ -141,7 +146,6 @@
             </p>
         </section>
     </div>
-
 
     <!-- ENGLISH -->
     <div id="policy-en" class="hidden">
@@ -273,7 +277,6 @@
         toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
       }
     }
-    // Init theme
     setDarkMode(dark);
 
     toggle.addEventListener('click', function() {
@@ -281,11 +284,36 @@
       setDarkMode(dark);
     });
 
-    // Language switcher
     function switchLanguage(lang) {
       document.getElementById("policy-it").classList.toggle("hidden", lang !== "it");
       document.getElementById("policy-en").classList.toggle("hidden", lang !== "en");
     }
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger-toggle');
+    const controlsMenu = document.getElementById('main-menu');
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      controlsMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', controlsMenu.classList.contains('open') ? "true" : "false");
+      // Blocca scroll quando il menu è aperto
+      document.body.classList.toggle('menu-open', controlsMenu.classList.contains('open'));
+    });
+
+    // Chiudi il menu cliccando fuori
+    document.addEventListener('click', function(e) {
+      if (
+        window.innerWidth <= 700 &&
+        controlsMenu.classList.contains('open') &&
+        !controlsMenu.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        controlsMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', "false");
+        document.body.classList.remove('menu-open');
+      }
+    });
 </script>
 </body>
 </html>

@@ -10,12 +10,13 @@
 }
 
 body {
-  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   background: var(--main-bg);
   color: var(--main-fg);
   margin: 0;
   min-height: 100vh;
   transition: background 0.2s, color 0.2s;
+  overflow-x: hidden;
 }
 
 body.dark {
@@ -39,11 +40,11 @@ a:hover {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 32px auto 32px auto;
   background: var(--box-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.08);
   padding: 32px 24px;
   border: 1px solid var(--border);
 }
@@ -53,31 +54,47 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
-  flex-wrap: wrap;
   gap: 12px;
+  position: relative;
+  width: 100%;
 }
-header h1 {
+.header-main {
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  margin: 0;
-  flex-wrap: wrap;
+  gap: 14px;
 }
-header .spacer {
-  width: 10px;
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-.controls {
+nav.controls {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: static;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--main-fg);
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+.hamburger:focus-visible {
+  outline: 2px solid var(--link);
 }
 
 .control-btn,
 .language-switcher,
 .darkmode-toggle {
-  padding: 8px 12px;
-  border-radius: 20px;
+  padding: 8px 20px;
+  border-radius: 999px;
   border: none;
   background: var(--box-bg);
   color: var(--main-fg);
@@ -99,21 +116,18 @@ header .spacer {
   outline: 2px solid var(--link);
 }
 
-.language-switcher {
+.language-switcher,
+.language-switcher:focus,
+.language-switcher:hover,
+.language-switcher:active {
   min-width: 120px;
-  padding-right: 30px;
+  padding-right: 36px;
   appearance: none;
   background-image: var(--select-arrow);
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px 8px;
-}
-
-.language-switcher,
-.language-switcher:focus,
-.language-switcher:hover,
-.language-switcher:active {
-  background: var(--box-bg) !important;
+  background-color: var(--box-bg) !important;
   color: var(--main-fg) !important;
   border: none;
   box-shadow: none;
@@ -162,23 +176,56 @@ ul {
   display: none !important;
 }
 
-@media (max-width: 700px) {
-  .container {
-    margin: 8px;
-    padding: 16px 4vw;
-    border-radius: 10px;
+/* HAMBURGER MENU: FULLSCREEN OVERLAY ON MOBILE */
+@media (max-width: 800px) {
+  .header-main {
+    flex: 1;
+    min-width: 0;
   }
-  header {
+  .header-title {
+    font-size: 1.05rem;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hamburger {
+    display: block;
+    z-index: 102;
+  }
+  nav.controls {
+    display: none;
+  }
+  nav.controls.open {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-bg);
+    z-index: 101;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    animation: fadeInMenu 0.18s;
   }
-  header h1 {
-    font-size: 1.3rem;
+  @keyframes fadeInMenu {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
-  .controls {
-    flex-direction: row;
-    gap: 6px;
-    margin-top: 5px;
+  body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+/* Migliora tocco su mobile */
+@media (hover: none) and (pointer: coarse) {
+  .control-btn, .language-switcher, .darkmode-toggle {
+    min-height: 48px;
   }
 }
