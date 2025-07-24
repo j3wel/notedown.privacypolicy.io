@@ -1,319 +1,432 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy – NoteDown</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="container">
-    <header>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
         <div class="header-main">
-            <img src="notedown_logo.svg" alt="NoteDown Logo" width="48" height="48"/>
-            <span class="header-title">Privacy Policy – NoteDown</span>
+          <img
+            src="notedown_logo.svg"
+            alt="NoteDown Logo"
+            width="48"
+            height="48"
+          />
+          <span class="header-title">Privacy Policy – NoteDown</span>
         </div>
         <nav class="controls" id="main-menu">
-            <select class="language-switcher control-btn" onchange="switchLanguage(this.value)">
-                <option value="it">🇮🇹 Italiano</option>
-                <option value="en">🇬🇧 English</option>
+          <label>
+            <select
+              class="language-switcher control-btn"
+              onchange="switchLanguage(this.value)"
+            >
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="en">🇬🇧 English</option>
             </select>
-            <button class="darkmode-toggle control-btn" id="darkmode-toggle" title="Cambia tema" aria-label="Cambia tema">
-                <i class="fa-solid fa-moon"></i>
-            </button>
+          </label>
+          <button
+            class="darkmode-toggle control-btn"
+            id="darkmode-toggle"
+            title="Cambia tema"
+            aria-label="Cambia tema"
+          >
+            <i class="fa-solid fa-moon"></i>
+            <span class="only-mobile-label">Tema</span>
+          </button>
         </nav>
-        <button class="hamburger" id="hamburger-toggle" aria-label="Apri menu" aria-controls="main-menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
+        <button
+          class="hamburger"
+          id="hamburger-toggle"
+          aria-label="Apri menu"
+          aria-controls="main-menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
         </button>
-    </header>
+      </header>
 
-    <!-- ITALIANO -->
-    <div id="policy-it">
+      <!-- ITALIANO -->
+      <div id="policy-it">
         <section>
-            <h2><i class="fa-solid fa-user-shield fa-fw"></i>Titolare del trattamento</h2>
-            <p>Matteo Papiani<br>
-                Via Antonio Labriola 2A, 05100, Terni (TR), Italia<br>
-                Email: <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a></p>
+          <h2>
+            <i class="fa-solid fa-user-shield fa-fw"></i>Titolare del
+            trattamento
+          </h2>
+          <p>
+            Matteo Papiani<br />
+            Via Antonio Labriola 2A, 05100, Terni (TR), Italia<br />
+            Email:
+            <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a>
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-calendar-day fa-fw"></i>Ultimo aggiornamento</h2>
-            <p>Giovedì 24/07/2025</p>
+          <h2>
+            <i class="fa-solid fa-calendar-day fa-fw"></i>Ultimo aggiornamento
+          </h2>
+          <p>Giovedì 24/07/2025</p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-book-open fa-fw"></i>Introduzione</h2>
-            <p>
-                La presente Privacy Policy descrive come vengono gestiti i dati personali degli utenti che utilizzano
-                l'app NoteDown. L'applicazione è prodotta e distribuita da Matteo Papiani, senza l'intervento di alcuna
-                azienda terza.
-            </p>
+          <h2><i class="fa-solid fa-book-open fa-fw"></i>Introduzione</h2>
+          <p>
+            La presente Privacy Policy descrive come vengono gestiti i dati
+            personali degli utenti che utilizzano l'app NoteDown. L'applicazione
+            è prodotta e distribuita da Matteo Papiani, senza l'intervento di
+            alcuna azienda terza.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-database fa-fw"></i>Tipologia di dati raccolti</h2>
-            <ul>
-                <li>Titolo</li>
-                <li>Testo della nota</li>
-                <li>Data e ora di creazione o modifica</li>
-            </ul>
-            <p>Questi dati vengono salvati esclusivamente in locale sul dispositivo dell'utente tramite un database
-                SQLite.<br>
-                L'app non richiede alcun tipo di account, registrazione, né raccoglie informazioni personali aggiuntive.
-            </p>
+          <h2>
+            <i class="fa-solid fa-database fa-fw"></i>Tipologia di dati raccolti
+          </h2>
+          <ul>
+            <li>Titolo</li>
+            <li>Testo della nota</li>
+            <li>Data e ora di creazione o modifica</li>
+          </ul>
+          <p>
+            Questi dati vengono salvati esclusivamente in locale sul dispositivo
+            dell'utente tramite un database SQLite.<br />
+            L'app non richiede alcun tipo di account, registrazione, né
+            raccoglie informazioni personali aggiuntive.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-bullseye fa-fw"></i>Finalità del trattamento</h2>
-            <p>
-                I dati salvati dall'utente servono esclusivamente per l'utilizzo locale dell'applicazione stessa, ovvero
-                permettere all'utente di creare, modificare e conservare le proprie note direttamente sul proprio
-                dispositivo.
-            </p>
+          <h2>
+            <i class="fa-solid fa-bullseye fa-fw"></i>Finalità del trattamento
+          </h2>
+          <p>
+            I dati salvati dall'utente servono esclusivamente per l'utilizzo
+            locale dell'applicazione stessa, ovvero permettere all'utente di
+            creare, modificare e conservare le proprie note direttamente sul
+            proprio dispositivo.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-chart-line fa-fw"></i>Analisi e Crash Reporting</h2>
-            <p>
-                NoteDown utilizza i seguenti servizi di analisi per monitorare e migliorare la stabilità e l'esperienza
-                d'uso dell'app:
-            </p>
-            <ul>
-                <li>Firebase Analytics</li>
-                <li>Firebase Crashlytics</li>
-            </ul>
-            <p>
-                Al primo avvio, l'applicazione richiede esplicitamente il consenso dell'utente alla raccolta di dati
-                analitici e di diagnostica. Qualora l'utente neghi il consenso, i dati analitici saranno comunque
-                raccolti esclusivamente in forma aggregata e totalmente anonima.<br>
-                Firebase Analytics e Firebase Crashlytics potrebbero raccogliere in forma pseudonimizzata informazioni
-                tecniche come:
-            </p>
-            <ul>
-                <li>Indirizzo IP</li>
-                <li>Identificativi tecnici del dispositivo</li>
-                <li>Informazioni relative al dispositivo e al sistema operativo</li>
-            </ul>
-            <p>
-                Questi dati vengono utilizzati esclusivamente per monitorare e risolvere eventuali problemi tecnici e
-                migliorare l'esperienza dell'utente.
-            </p>
+          <h2>
+            <i class="fa-solid fa-chart-line fa-fw"></i>Analisi e Crash
+            Reporting
+          </h2>
+          <p>
+            NoteDown utilizza i seguenti servizi di analisi per monitorare e
+            migliorare la stabilità e l'esperienza d'uso dell'app:
+          </p>
+          <ul>
+            <li>Firebase Analytics</li>
+            <li>Firebase Crashlytics</li>
+          </ul>
+          <p>
+            Al primo avvio, l'applicazione richiede esplicitamente il consenso
+            dell'utente alla raccolta di dati analitici e di diagnostica.
+            Qualora l'utente neghi il consenso, i dati analitici saranno
+            comunque raccolti esclusivamente in forma aggregata e totalmente
+            anonima.<br />
+            Firebase Analytics e Firebase Crashlytics potrebbero raccogliere in
+            forma pseudonimizzata informazioni tecniche come:
+          </p>
+          <ul>
+            <li>Indirizzo IP</li>
+            <li>Identificativi tecnici del dispositivo</li>
+            <li>Informazioni relative al dispositivo e al sistema operativo</li>
+          </ul>
+          <p>
+            Questi dati vengono utilizzati esclusivamente per monitorare e
+            risolvere eventuali problemi tecnici e migliorare l'esperienza
+            dell'utente.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-user-lock fa-fw"></i>Nessuna condivisione dei dati</h2>
-            <p>
-                NoteDown non condivide in alcun modo con terze parti i dati personali salvati dagli utenti
-                nell'applicazione, fatta eccezione per quanto strettamente necessario al funzionamento dei servizi
-                Firebase Analytics e Crashlytics sopra citati.
-            </p>
+          <h2>
+            <i class="fa-solid fa-user-lock fa-fw"></i>Nessuna condivisione dei
+            dati
+          </h2>
+          <p>
+            NoteDown non condivide in alcun modo con terze parti i dati
+            personali salvati dagli utenti nell'applicazione, fatta eccezione
+            per quanto strettamente necessario al funzionamento dei servizi
+            Firebase Analytics e Crashlytics sopra citati.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-database fa-fw"></i>Conservazione e cancellazione dei dati</h2>
-            <p>
-                I dati generati dall'utente sono salvati esclusivamente sul dispositivo locale tramite un database
-                SQLite. L'utente può cancellare tutti i dati semplicemente eliminando le singole note o disinstallando
-                l'applicazione dal proprio dispositivo.
-            </p>
+          <h2>
+            <i class="fa-solid fa-database fa-fw"></i>Conservazione e
+            cancellazione dei dati
+          </h2>
+          <p>
+            I dati generati dall'utente sono salvati esclusivamente sul
+            dispositivo locale tramite un database SQLite. L'utente può
+            cancellare tutti i dati semplicemente eliminando le singole note o
+            disinstallando l'applicazione dal proprio dispositivo.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-user-check fa-fw"></i>Diritti degli interessati</h2>
-            <p>
-                L'utente può gestire autonomamente i propri dati direttamente dall'applicazione. Essendo i dati salvati
-                esclusivamente in locale, l'utente può esercitare i propri diritti di cancellazione eliminando le note
-                direttamente nell'app o disinstallando l'app stessa.<br>
-                Per eventuali ulteriori informazioni è possibile contattare direttamente il Titolare ai recapiti
-                indicati sopra.
-            </p>
+          <h2>
+            <i class="fa-solid fa-user-check fa-fw"></i>Diritti degli
+            interessati
+          </h2>
+          <p>
+            L'utente può gestire autonomamente i propri dati direttamente
+            dall'applicazione. Essendo i dati salvati esclusivamente in locale,
+            l'utente può esercitare i propri diritti di cancellazione eliminando
+            le note direttamente nell'app o disinstallando l'app stessa.<br />
+            Per eventuali ulteriori informazioni è possibile contattare
+            direttamente il Titolare ai recapiti indicati sopra.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-shield-halved fa-fw"></i>Sicurezza dei dati</h2>
-            <p>
-                NoteDown adotta misure adeguate per garantire la sicurezza dei dati salvati localmente sul dispositivo,
-                utilizzando strumenti standard e sicuri per il salvataggio e l'accesso ai dati (SQLite).
-            </p>
+          <h2>
+            <i class="fa-solid fa-shield-halved fa-fw"></i>Sicurezza dei dati
+          </h2>
+          <p>
+            NoteDown adotta misure adeguate per garantire la sicurezza dei dati
+            salvati localmente sul dispositivo, utilizzando strumenti standard e
+            sicuri per il salvataggio e l'accesso ai dati (SQLite).
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-rotate fa-fw"></i>Modifiche alla Privacy Policy</h2>
-            <p>
-                Questa Privacy Policy può essere soggetta a modifiche e aggiornamenti nel tempo. Si consiglia pertanto
-                agli utenti di consultare periodicamente questo documento per restare aggiornati su eventuali
-                cambiamenti.
-            </p>
+          <h2>
+            <i class="fa-solid fa-rotate fa-fw"></i>Modifiche alla Privacy
+            Policy
+          </h2>
+          <p>
+            Questa Privacy Policy può essere soggetta a modifiche e
+            aggiornamenti nel tempo. Si consiglia pertanto agli utenti di
+            consultare periodicamente questo documento per restare aggiornati su
+            eventuali cambiamenti.
+          </p>
         </section>
         <section>
-            <h2><i class="fa-solid fa-envelope fa-fw"></i>Contatti</h2>
-            <p>
-                Per qualsiasi domanda relativa alla Privacy Policy è possibile contattare:<br>
-                Matteo Papiani<br>
-                Via Antonio Labriola 2A, 05100, Terni (TR), Italia<br>
-                Email: <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a>
-            </p>
+          <h2><i class="fa-solid fa-envelope fa-fw"></i>Contatti</h2>
+          <p>
+            Per qualsiasi domanda relativa alla Privacy Policy è possibile
+            contattare:<br />
+            Matteo Papiani<br />
+            Via Antonio Labriola 2A, 05100, Terni (TR), Italia<br />
+            Email:
+            <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a>
+          </p>
         </section>
+      </div>
+
+      <!-- ENGLISH -->
+      <div id="policy-en" class="hidden">
+        <section>
+          <h2><i class="fa-solid fa-user-shield fa-fw"></i>Data Controller</h2>
+          <p>
+            Matteo Papiani<br />
+            Via Antonio Labriola 2A, 05100, Terni (TR), Italy<br />
+            Email:
+            <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a>
+          </p>
+        </section>
+        <section>
+          <h2><i class="fa-solid fa-calendar-day fa-fw"></i>Last updated</h2>
+          <p>Tuesday 07/24/2025</p>
+        </section>
+        <section>
+          <h2><i class="fa-solid fa-book-open fa-fw"></i>Introduction</h2>
+          <p>
+            This Privacy Policy describes how users’ personal data is managed
+            within the NoteDown app. The application is produced and distributed
+            by Matteo Papiani, with no involvement from any third-party company.
+          </p>
+        </section>
+        <section>
+          <h2>
+            <i class="fa-solid fa-database fa-fw"></i>Type of Data Collected
+          </h2>
+          <ul>
+            <li>Title</li>
+            <li>Note content</li>
+            <li>Creation or modification date and time</li>
+          </ul>
+          <p>
+            This data is stored exclusively locally on the user’s device using
+            an SQLite database.<br />
+            The app does not require any account or registration, nor does it
+            collect any additional personal information.
+          </p>
+        </section>
+        <section>
+          <h2>
+            <i class="fa-solid fa-bullseye fa-fw"></i>Purpose of Processing
+          </h2>
+          <p>
+            The data saved by the user serves solely for the local use of the
+            application, allowing users to create, modify, and store their notes
+            directly on their device.
+          </p>
+        </section>
+        <section>
+          <h2>
+            <i class="fa-solid fa-chart-line fa-fw"></i>Analytics and Crash
+            Reporting
+          </h2>
+          <p>
+            NoteDown uses the following analytics services to monitor and
+            improve the stability and user experience of the app:
+          </p>
+          <ul>
+            <li>Firebase Analytics</li>
+            <li>Firebase Crashlytics</li>
+          </ul>
+          <p>
+            Upon first launch, the app explicitly requests user consent for
+            analytics and diagnostic data collection. If the user denies
+            consent, analytics data will still be collected, but only in
+            aggregated and fully anonymous form.<br />
+            Firebase Analytics and Firebase Crashlytics may pseudonymously
+            collect technical information such as:
+          </p>
+          <ul>
+            <li>IP address</li>
+            <li>Technical device identifiers</li>
+            <li>Device and operating system information</li>
+          </ul>
+          <p>
+            This data is used solely to monitor and resolve technical issues and
+            improve user experience.
+          </p>
+        </section>
+        <section>
+          <h2><i class="fa-solid fa-user-lock fa-fw"></i>No Data Sharing</h2>
+          <p>
+            NoteDown does not share in any way with third parties the personal
+            data saved by users in the app, except as strictly necessary for the
+            operation of the above-mentioned Firebase Analytics and Crashlytics
+            services.
+          </p>
+        </section>
+        <section>
+          <h2>
+            <i class="fa-solid fa-database fa-fw"></i>Data Retention and
+            Deletion
+          </h2>
+          <p>
+            Data generated by the user is stored exclusively on the local device
+            via an SQLite database. The user can delete all data simply by
+            deleting individual notes or uninstalling the app from their device.
+          </p>
+        </section>
+        <section>
+          <h2>
+            <i class="fa-solid fa-user-check fa-fw"></i>Data Subject Rights
+          </h2>
+          <p>
+            Users can manage their data independently directly from the
+            application. As the data is stored exclusively locally, users can
+            exercise their right to erasure by deleting notes directly in the
+            app or by uninstalling the app itself.<br />
+            For further information, users may contact the Data Controller at
+            the contacts above.
+          </p>
+        </section>
+        <section>
+          <h2><i class="fa-solid fa-shield-halved fa-fw"></i>Data Security</h2>
+          <p>
+            NoteDown adopts appropriate measures to ensure the security of data
+            stored locally on the device, using standard and secure tools for
+            data storage and access (SQLite).
+          </p>
+        </section>
+        <section>
+          <h2>
+            <i class="fa-solid fa-rotate fa-fw"></i>Changes to the Privacy
+            Policy
+          </h2>
+          <p>
+            This Privacy Policy may be subject to changes and updates over time.
+            Users are therefore advised to consult this document periodically to
+            stay informed of any changes.
+          </p>
+        </section>
+        <section>
+          <h2><i class="fa-solid fa-envelope fa-fw"></i>Contact</h2>
+          <p>
+            For any questions regarding the Privacy Policy, you may contact:<br />
+            Matteo Papiani<br />
+            Via Antonio Labriola 2A, 05100, Terni (TR), Italy<br />
+            Email:
+            <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a>
+          </p>
+        </section>
+      </div>
     </div>
 
-    <!-- ENGLISH -->
-    <div id="policy-en" class="hidden">
-        <section>
-            <h2><i class="fa-solid fa-user-shield fa-fw"></i>Data Controller</h2>
-            <p>Matteo Papiani<br>
-                Via Antonio Labriola 2A, 05100, Terni (TR), Italy<br>
-                Email: <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a></p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-calendar-day fa-fw"></i>Last updated</h2>
-            <p>Tuesday 07/24/2025</p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-book-open fa-fw"></i>Introduction</h2>
-            <p>
-                This Privacy Policy describes how users’ personal data is managed within the NoteDown app. The
-                application is produced and distributed by Matteo Papiani, with no involvement from any third-party
-                company.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-database fa-fw"></i>Type of Data Collected</h2>
-            <ul>
-                <li>Title</li>
-                <li>Note content</li>
-                <li>Creation or modification date and time</li>
-            </ul>
-            <p>
-                This data is stored exclusively locally on the user’s device using an SQLite database.<br>
-                The app does not require any account or registration, nor does it collect any additional personal
-                information.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-bullseye fa-fw"></i>Purpose of Processing</h2>
-            <p>
-                The data saved by the user serves solely for the local use of the application, allowing users to create,
-                modify, and store their notes directly on their device.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-chart-line fa-fw"></i>Analytics and Crash Reporting</h2>
-            <p>
-                NoteDown uses the following analytics services to monitor and improve the stability and user experience
-                of the app:
-            </p>
-            <ul>
-                <li>Firebase Analytics</li>
-                <li>Firebase Crashlytics</li>
-            </ul>
-            <p>
-                Upon first launch, the app explicitly requests user consent for analytics and diagnostic data
-                collection. If the user denies consent, analytics data will still be collected, but only in aggregated
-                and fully anonymous form.<br>
-                Firebase Analytics and Firebase Crashlytics may pseudonymously collect technical information such as:
-            </p>
-            <ul>
-                <li>IP address</li>
-                <li>Technical device identifiers</li>
-                <li>Device and operating system information</li>
-            </ul>
-            <p>
-                This data is used solely to monitor and resolve technical issues and improve user experience.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-user-lock fa-fw"></i>No Data Sharing</h2>
-            <p>
-                NoteDown does not share in any way with third parties the personal data saved by users in the app,
-                except as strictly necessary for the operation of the above-mentioned Firebase Analytics and Crashlytics
-                services.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-database fa-fw"></i>Data Retention and Deletion</h2>
-            <p>
-                Data generated by the user is stored exclusively on the local device via an SQLite database. The user
-                can delete all data simply by deleting individual notes or uninstalling the app from their device.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-user-check fa-fw"></i>Data Subject Rights</h2>
-            <p>
-                Users can manage their data independently directly from the application. As the data is stored
-                exclusively locally, users can exercise their right to erasure by deleting notes directly in the app or
-                by uninstalling the app itself.<br>
-                For further information, users may contact the Data Controller at the contacts above.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-shield-halved fa-fw"></i>Data Security</h2>
-            <p>
-                NoteDown adopts appropriate measures to ensure the security of data stored locally on the device, using
-                standard and secure tools for data storage and access (SQLite).
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-rotate fa-fw"></i>Changes to the Privacy Policy</h2>
-            <p>
-                This Privacy Policy may be subject to changes and updates over time. Users are therefore advised to
-                consult this document periodically to stay informed of any changes.
-            </p>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-envelope fa-fw"></i>Contact</h2>
-            <p>
-                For any questions regarding the Privacy Policy, you may contact:<br>
-                Matteo Papiani<br>
-                Via Antonio Labriola 2A, 05100, Terni (TR), Italy<br>
-                Email: <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a>
-            </p>
-        </section>
-    </div>
-</div>
+    <script>
+      // Dark mode toggle
+      const toggle = document.getElementById("darkmode-toggle");
+      const themeLabel = document.getElementById("theme-label");
+      const body = document.body;
+      let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-<script>
-    // Dark mode toggle
-    const toggle = document.getElementById('darkmode-toggle');
-    const body = document.body;
-    let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    function setDarkMode(on) {
-      if(on) {
-        body.classList.add('dark');
-        toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-      } else {
-        body.classList.remove('dark');
-        toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      function setDarkMode(on) {
+        if (on) {
+          body.classList.add("dark");
+          toggle.innerHTML =
+            '<i class="fa-solid fa-sun"></i><span id="theme-label" class="only-mobile-label" aria-live="polite">Tema chiaro</span>';
+        } else {
+          body.classList.remove("dark");
+          toggle.innerHTML =
+            '<i class="fa-solid fa-moon"></i><span id="theme-label" class="only-mobile-label" aria-live="polite">Tema scuro</span>';
+        }
       }
-    }
-    setDarkMode(dark);
 
-    toggle.addEventListener('click', function() {
-      dark = !body.classList.contains('dark');
       setDarkMode(dark);
-    });
 
-    function switchLanguage(lang) {
-      document.getElementById("policy-it").classList.toggle("hidden", lang !== "it");
-      document.getElementById("policy-en").classList.toggle("hidden", lang !== "en");
-    }
+      toggle.addEventListener("click", function () {
+        dark = !body.classList.contains("dark");
+        setDarkMode(dark);
+      });
 
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger-toggle');
-    const controlsMenu = document.getElementById('main-menu');
-
-    hamburger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      controlsMenu.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', controlsMenu.classList.contains('open') ? "true" : "false");
-      // Blocca scroll quando il menu è aperto
-      document.body.classList.toggle('menu-open', controlsMenu.classList.contains('open'));
-    });
-
-    // Chiudi il menu cliccando fuori
-    document.addEventListener('click', function(e) {
-      if (
-        window.innerWidth <= 700 &&
-        controlsMenu.classList.contains('open') &&
-        !controlsMenu.contains(e.target) &&
-        !hamburger.contains(e.target)
-      ) {
-        controlsMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', "false");
-        document.body.classList.remove('menu-open');
+      function switchLanguage(lang) {
+        document
+          .getElementById("policy-it")
+          .classList.toggle("hidden", lang !== "it");
+        document
+          .getElementById("policy-en")
+          .classList.toggle("hidden", lang !== "en");
       }
-    });
-</script>
-</body>
+
+      // Hamburger menu toggle
+      const hamburger = document.getElementById("hamburger-toggle");
+      const controlsMenu = document.getElementById("main-menu");
+
+      hamburger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        controlsMenu.classList.toggle("open");
+        hamburger.setAttribute(
+          "aria-expanded",
+          controlsMenu.classList.contains("open") ? "true" : "false"
+        );
+        // Blocca scroll quando il menu è aperto
+        document.body.classList.toggle(
+          "menu-open",
+          controlsMenu.classList.contains("open")
+        );
+      });
+
+      // Chiudi il menu cliccando fuori
+      document.addEventListener("click", function (e) {
+        if (
+          window.innerWidth <= 800 &&
+          controlsMenu.classList.contains("open") &&
+          !controlsMenu.contains(e.target) &&
+          !hamburger.contains(e.target)
+        ) {
+          controlsMenu.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        }
+      });
+    </script>
+  </body>
 </html>

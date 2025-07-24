@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
   background: var(--main-bg);
   color: var(--main-fg);
   margin: 0;
@@ -41,10 +41,10 @@ a:hover {
 
 .container {
   max-width: 800px;
-  margin: 32px auto 32px auto;
+  margin: 32px auto;
   background: var(--box-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.08);
   padding: 32px 24px;
   border: 1px solid var(--border);
 }
@@ -90,6 +90,7 @@ nav.controls {
   outline: 2px solid var(--link);
 }
 
+/* Bottoni moderni/pill */
 .control-btn,
 .language-switcher,
 .darkmode-toggle {
@@ -116,6 +117,7 @@ nav.controls {
   outline: 2px solid var(--link);
 }
 
+/* Select custom */
 .language-switcher,
 .language-switcher:focus,
 .language-switcher:hover,
@@ -133,6 +135,13 @@ nav.controls {
   box-shadow: none;
 }
 
+/* Icona tema */
+.darkmode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 .darkmode-toggle i {
   font-size: 1.2em;
   vertical-align: middle;
@@ -145,6 +154,16 @@ body.dark .darkmode-toggle .fa-moon {
   color: #191919 !important;
 }
 
+/* Solo su mobile/hamburger: label "Tema" visibile */
+.only-mobile-label {
+  display: none;
+  margin-left: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  justify-content: center;
+}
+
+/* Policy content */
 section {
   border-bottom: 1px solid var(--border);
   padding-bottom: 18px;
@@ -176,7 +195,7 @@ ul {
   display: none !important;
 }
 
-/* HAMBURGER MENU: FULLSCREEN OVERLAY ON MOBILE */
+/* FULLSCREEN HAMBURGER MENU MOBILE */
 @media (max-width: 800px) {
   .header-main {
     flex: 1;
@@ -214,18 +233,64 @@ ul {
     animation: fadeInMenu 0.18s;
   }
   @keyframes fadeInMenu {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   body.menu-open {
     overflow: hidden;
     touch-action: none;
   }
+  /* Bottoni e select grandi e simmetrici */
+  nav.controls.open .control-btn,
+  nav.controls.open .language-switcher,
+  nav.controls.open .darkmode-toggle {
+    width: 70vw;
+    min-width: 220px;
+    max-width: 95vw;
+    justify-content: center;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.08rem;
+    padding: 14px 0;
+    border-radius: 999px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  nav.controls.open .darkmode-toggle i {
+    margin: 0 auto;
+    font-size: 1.15em;
+    pointer-events: none;
+  }
+  nav.controls.open .darkmode-toggle {
+    display: inline;
+    justify-content: center;
+  }
+  nav.controls.open .darkmode-toggle .only-mobile-label {
+    display: inline;
+    margin-left: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    justify-content: center;
+  }
+  nav.controls.open .language-switcher {
+    appearance: none;
+    background-image: var(--select-arrow);
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 16px 8px;
+  }
 }
 
 /* Migliora tocco su mobile */
 @media (hover: none) and (pointer: coarse) {
-  .control-btn, .language-switcher, .darkmode-toggle {
+  .control-btn,
+  .language-switcher,
+  .darkmode-toggle {
     min-height: 48px;
   }
 }
