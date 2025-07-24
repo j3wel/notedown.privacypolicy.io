@@ -39,8 +39,8 @@
             title="Cambia tema"
             aria-label="Cambia tema"
           >
-            <i class="fa-solid fa-moon"></i>
-            <span class="only-mobile-label">Tema</span>
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+            <span id="theme-label" class="theme-label">Tema scuro</span>
           </button>
         </nav>
         <button
@@ -53,7 +53,7 @@
           <i class="fa-solid fa-bars"></i>
         </button>
       </header>
-
+      <div id="menu-overlay"></div>
       <!-- ITALIANO -->
       <div id="policy-it">
         <section>
@@ -360,73 +360,6 @@
         </section>
       </div>
     </div>
-
-    <script>
-      // Dark mode toggle
-      const toggle = document.getElementById("darkmode-toggle");
-      const themeLabel = document.getElementById("theme-label");
-      const body = document.body;
-      let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-      function setDarkMode(on) {
-        if (on) {
-          body.classList.add("dark");
-          toggle.innerHTML =
-            '<i class="fa-solid fa-sun"></i><span id="theme-label" class="only-mobile-label" aria-live="polite">Tema chiaro</span>';
-        } else {
-          body.classList.remove("dark");
-          toggle.innerHTML =
-            '<i class="fa-solid fa-moon"></i><span id="theme-label" class="only-mobile-label" aria-live="polite">Tema scuro</span>';
-        }
-      }
-
-      setDarkMode(dark);
-
-      toggle.addEventListener("click", function () {
-        dark = !body.classList.contains("dark");
-        setDarkMode(dark);
-      });
-
-      function switchLanguage(lang) {
-        document
-          .getElementById("policy-it")
-          .classList.toggle("hidden", lang !== "it");
-        document
-          .getElementById("policy-en")
-          .classList.toggle("hidden", lang !== "en");
-      }
-
-      // Hamburger menu toggle
-      const hamburger = document.getElementById("hamburger-toggle");
-      const controlsMenu = document.getElementById("main-menu");
-
-      hamburger.addEventListener("click", function (e) {
-        e.stopPropagation();
-        controlsMenu.classList.toggle("open");
-        hamburger.setAttribute(
-          "aria-expanded",
-          controlsMenu.classList.contains("open") ? "true" : "false"
-        );
-        // Blocca scroll quando il menu è aperto
-        document.body.classList.toggle(
-          "menu-open",
-          controlsMenu.classList.contains("open")
-        );
-      });
-
-      // Chiudi il menu cliccando fuori
-      document.addEventListener("click", function (e) {
-        if (
-          window.innerWidth <= 800 &&
-          controlsMenu.classList.contains("open") &&
-          !controlsMenu.contains(e.target) &&
-          !hamburger.contains(e.target)
-        ) {
-          controlsMenu.classList.remove("open");
-          hamburger.setAttribute("aria-expanded", "false");
-          document.body.classList.remove("menu-open");
-        }
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

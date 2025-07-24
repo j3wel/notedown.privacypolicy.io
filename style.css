@@ -58,6 +58,20 @@ header {
   position: relative;
   width: 100%;
 }
+
+#menu-overlay {
+  display: none;
+}
+nav.controls.open + #menu-overlay,
+#menu-overlay.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.1); /* O più scuro se vuoi */
+  cursor: pointer;
+}
+
 .header-main {
   display: flex;
   align-items: center;
@@ -155,7 +169,7 @@ body.dark .darkmode-toggle .fa-moon {
 }
 
 /* Solo su mobile/hamburger: label "Tema" visibile */
-.only-mobile-label {
+.theme-label {
   display: none;
   margin-left: 12px;
   font-weight: 500;
@@ -270,7 +284,7 @@ ul {
     display: inline;
     justify-content: center;
   }
-  nav.controls.open .darkmode-toggle .only-mobile-label {
+  nav.controls.open .darkmode-toggle .theme-label {
     display: inline;
     margin-left: 12px;
     font-weight: 500;
