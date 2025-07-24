@@ -5,100 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Privacy Policy – NoteDown</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        body {
-          font-family: 'Segoe UI', Arial, sans-serif;
-          background: #fff;
-          color: #191919;
-          margin: 0;
-          padding: 0;
-        }
-        .container {
-          max-width: 800px;
-          margin: 32px auto;
-          background: #fff;
-          border-radius: 10px;
-          box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-          padding: 32px 24px;
-        }
-        .spacer {
-          display: inline-block;
-          width: 10px; /* or any desired value */
-          height: 1px; /* optional */
-        }
-        header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 24px;
-          flex-wrap: wrap;
-        }
-        h1 {
-          font-size: 2rem;
-          margin: 0 0 8px 0;
-          display: flex;
-          align-items: center;
-        }
-        .fa-note-sticky {
-          margin-right: 10px;
-          color: #222;
-        }
-        .language-switcher {
-          font-size: 1rem;
-          padding: 0.2em 0.5em;
-          border-radius: 5px;
-          border: 1px solid #ddd;
-          background: #f6f6f6;
-          cursor: pointer;
-        }
-        section {
-          margin-bottom: 2.2rem;
-        }
-        h2 {
-          margin-top: 1.5rem;
-          margin-bottom: 0.7rem;
-          font-size: 1.22rem;
-          display: flex;
-          align-items: center;
-          color: #222;
-          font-weight: 600;
-        }
-        h2 .fa-fw {
-          margin-right: 8px;
-          color: #222;
-        }
-        p, ul {
-          margin: 0.3em 0 0.5em 0;
-          line-height: 1.7;
-          font-size: 1.02em;
-        }
-        ul {
-          padding-left: 1.6em;
-        }
-        .hidden {
-          display: none;
-        }
-        @media (max-width: 600px) {
-          .container { padding: 16px 4vw; }
-          h1 { font-size: 1.3rem;}
-          h2 { font-size: 1.07rem;}
-        }
-        a { color: #191919; text-decoration: underline; }
-        a:hover { color: #000; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>
-            <img src="notedown_logo.svg" alt="NoteDown Logo" width="64" height="64" style="margin-right:10px;"/>
-            <span class="spacer"></span>
-            Privacy Policy – NoteDown
-        </h1>
-        <select class="language-switcher" onchange="switchLanguage(this.value)">
-            <option value="it">🇮🇹 Italiano</option>
-            <option value="en">🇬🇧 English</option>
-        </select>
+        <h1><img src="notedown_logo.svg" alt="NoteDown Logo" width="64" height="64" style="margin-right:10px;"/>
+            <span class="spacer"></span> Privacy Policy – NoteDown</h1>
+        <div class="controls">
+            <select class="language-switcher control-btn" onchange="switchLanguage(this.value)">
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
+            <button class="darkmode-toggle control-btn" id="darkmode-toggle" title="Cambia tema" aria-label="Cambia tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </header>
 
     <!-- ITALIANO -->
@@ -109,16 +31,18 @@
                 Via Antonio Labriola 2A, 05100, Terni (TR), Italia<br>
                 Email: <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a></p>
         </section>
-
         <section>
-            <h2><i class="fa-solid fa-file-circle-info fa-fw"></i>Introduzione</h2>
+            <h2><i class="fa-solid fa-calendar-day fa-fw"></i>Ultimo aggiornamento</h2>
+            <p>Giovedì 24/07/2025</p>
+        </section>
+        <section>
+            <h2><i class="fa-solid fa-book-open fa-fw"></i>Introduzione</h2>
             <p>
                 La presente Privacy Policy descrive come vengono gestiti i dati personali degli utenti che utilizzano
                 l'app NoteDown. L'applicazione è prodotta e distribuita da Matteo Papiani, senza l'intervento di alcuna
                 azienda terza.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-database fa-fw"></i>Tipologia di dati raccolti</h2>
             <ul>
@@ -131,7 +55,6 @@
                 L'app non richiede alcun tipo di account, registrazione, né raccoglie informazioni personali aggiuntive.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-bullseye fa-fw"></i>Finalità del trattamento</h2>
             <p>
@@ -140,7 +63,6 @@
                 dispositivo.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-chart-line fa-fw"></i>Analisi e Crash Reporting</h2>
             <p>
@@ -168,7 +90,6 @@
                 migliorare l'esperienza dell'utente.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-user-lock fa-fw"></i>Nessuna condivisione dei dati</h2>
             <p>
@@ -177,7 +98,6 @@
                 Firebase Analytics e Crashlytics sopra citati.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-database fa-fw"></i>Conservazione e cancellazione dei dati</h2>
             <p>
@@ -186,7 +106,6 @@
                 l'applicazione dal proprio dispositivo.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-user-check fa-fw"></i>Diritti degli interessati</h2>
             <p>
@@ -197,7 +116,6 @@
                 indicati sopra.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-shield-halved fa-fw"></i>Sicurezza dei dati</h2>
             <p>
@@ -205,7 +123,6 @@
                 utilizzando strumenti standard e sicuri per il salvataggio e l'accesso ai dati (SQLite).
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-rotate fa-fw"></i>Modifiche alla Privacy Policy</h2>
             <p>
@@ -214,7 +131,6 @@
                 cambiamenti.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-envelope fa-fw"></i>Contatti</h2>
             <p>
@@ -226,6 +142,7 @@
         </section>
     </div>
 
+
     <!-- ENGLISH -->
     <div id="policy-en" class="hidden">
         <section>
@@ -234,16 +151,18 @@
                 Via Antonio Labriola 2A, 05100, Terni (TR), Italy<br>
                 Email: <a href="mailto:matty.papi@icloud.com">matty.papi@icloud.com</a></p>
         </section>
-
         <section>
-            <h2><i class="fa-solid fa-file-circle-info fa-fw"></i>Introduction</h2>
+            <h2><i class="fa-solid fa-calendar-day fa-fw"></i>Last updated</h2>
+            <p>Tuesday 07/24/2025</p>
+        </section>
+        <section>
+            <h2><i class="fa-solid fa-book-open fa-fw"></i>Introduction</h2>
             <p>
                 This Privacy Policy describes how users’ personal data is managed within the NoteDown app. The
                 application is produced and distributed by Matteo Papiani, with no involvement from any third-party
                 company.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-database fa-fw"></i>Type of Data Collected</h2>
             <ul>
@@ -257,7 +176,6 @@
                 information.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-bullseye fa-fw"></i>Purpose of Processing</h2>
             <p>
@@ -265,7 +183,6 @@
                 modify, and store their notes directly on their device.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-chart-line fa-fw"></i>Analytics and Crash Reporting</h2>
             <p>
@@ -291,7 +208,6 @@
                 This data is used solely to monitor and resolve technical issues and improve user experience.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-user-lock fa-fw"></i>No Data Sharing</h2>
             <p>
@@ -300,7 +216,6 @@
                 services.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-database fa-fw"></i>Data Retention and Deletion</h2>
             <p>
@@ -308,7 +223,6 @@
                 can delete all data simply by deleting individual notes or uninstalling the app from their device.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-user-check fa-fw"></i>Data Subject Rights</h2>
             <p>
@@ -318,7 +232,6 @@
                 For further information, users may contact the Data Controller at the contacts above.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-shield-halved fa-fw"></i>Data Security</h2>
             <p>
@@ -326,7 +239,6 @@
                 standard and secure tools for data storage and access (SQLite).
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-rotate fa-fw"></i>Changes to the Privacy Policy</h2>
             <p>
@@ -334,7 +246,6 @@
                 consult this document periodically to stay informed of any changes.
             </p>
         </section>
-
         <section>
             <h2><i class="fa-solid fa-envelope fa-fw"></i>Contact</h2>
             <p>
@@ -348,6 +259,29 @@
 </div>
 
 <script>
+    // Dark mode toggle
+    const toggle = document.getElementById('darkmode-toggle');
+    const body = document.body;
+    let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    function setDarkMode(on) {
+      if(on) {
+        body.classList.add('dark');
+        toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      } else {
+        body.classList.remove('dark');
+        toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      }
+    }
+    // Init theme
+    setDarkMode(dark);
+
+    toggle.addEventListener('click', function() {
+      dark = !body.classList.contains('dark');
+      setDarkMode(dark);
+    });
+
+    // Language switcher
     function switchLanguage(lang) {
       document.getElementById("policy-it").classList.toggle("hidden", lang !== "it");
       document.getElementById("policy-en").classList.toggle("hidden", lang !== "en");
