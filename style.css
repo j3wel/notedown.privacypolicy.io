@@ -266,7 +266,7 @@ ul {
     min-width: 220px;
     max-width: 95vw;
     justify-content: center;
-    display: flex;
+    display: inline;
     margin-left: 0;
     margin-right: 0;
     font-size: 1.08rem;
