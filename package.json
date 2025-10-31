@@ -1,0 +1,9 @@
+{
+  "name": "notedown-privacypolicy",
+  "version": "1.0.0",
+  "description": "Static privacy policy page for NoteDown",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}
